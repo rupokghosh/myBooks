@@ -1,6 +1,8 @@
 const myLibrary = [];
 const addButton = document.getElementById("addButton");
-const form = document.querySelector(".form");
+const hiddenForm = document.getElementById("hiddenForm");
+const closeBtn = document.getElementById("close");
+const form = document.getElementById("myForm");
 
 function Book(name, author, status, genre){
     
@@ -14,6 +16,18 @@ function addBookToLibrary() {
 
 }
 
-function makeForm(){
+// functions to show and hide the form
 
-}
+addButton.addEventListener("click", function() {
+    hiddenForm.style.display = "block";
+});
+
+closeBtn.addEventListener("click", function() {
+    hiddenForm.style.display = "none";
+});
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    hiddenForm.style.display = "none";
+
+});

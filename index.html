@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myBooks</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div class="header">My Books</div>
     <input type="button" id="addButton" value="add">
-    <div class="form">
-        
+    <div id="hiddenForm" class="modal">
+        <div class="modal-content">
+            <span id="close">&times;</span>
+            <form id="myForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <label for="author">Author:</label>
+                <input type="text" id="author">
+                <label for="genre">Genre</label>
+                <input type="text" id="genre">
+                <label for="checkbox">Have you read it?</label>
+                <input type="checkbox" id="checkbox">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
 
 

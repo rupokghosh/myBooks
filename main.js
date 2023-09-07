@@ -47,3 +47,16 @@ submitButton.addEventListener('click', function () {
 });
 
 addBookToLibrary(nameInput, authorInput, genreInput, hasReadInput);
+
+// display results;
+
+(function displayBooks() {
+
+})();
+
+// clear the form values
+
+document.getElementById('name').value = '';
+document.getElementById('author').value = '';
+document.getElementById('genre').value = '';
+document.getElementById('has-read').checked = false;

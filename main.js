@@ -3,10 +3,7 @@ const addButton = document.getElementById("addButton");
 const hiddenForm = document.getElementById("hiddenForm");
 const closeBtn = document.getElementById("close");
 const form = document.getElementById("myForm");
-const bookName = document.getElementById("name").value;
-const bookAuthor = document.getElementById("author").value;
-const bookGenre = document.getElementById("genre").value;
-const checkbox = document.getElementById("checkbox");
+const submit = document.getElementById("submit");
 
 function Book(name, author, status, genre){
     
@@ -16,8 +13,10 @@ function Book(name, author, status, genre){
     this.genre = status;
 }
 
-function addBookToLibrary() {
-    const book = new Book();
+// adding books to the library
+
+function addBookToLibrary(name, author, status, genre) {
+    const book = new Book(name, author, status, genre);
     myLibrary.push(Book);
 }
 
@@ -36,3 +35,15 @@ form.addEventListener("submit", function(event) {
     hiddenForm.style.display = "none";
 
 });
+
+//submit button functionality 
+
+submitButton.addEventListener('click', function () {
+    // Get user input values from the form
+    const nameInput = document.getElementById('name').value;
+    const authorInput = document.getElementById('author').value;
+    const genreInput = document.getElementById('genre').value;
+    const hasReadInput = document.getElementById('has-read').checked;
+});
+
+addBookToLibrary(nameInput, authorInput, genreInput, hasReadInput);

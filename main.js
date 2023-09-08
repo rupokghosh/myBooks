@@ -6,12 +6,14 @@ const form = document.getElementById("myForm");
 const submitButton = document.getElementById("submit");
 const display = document.getElementById("display");
 
-function Book(name, author, status, genre){
-    
-    this.name = name;
-    this.author = author;
-    this.status = status;
-    this.genre = status;
+class Book {
+    constructor(name, author, status, genre) {
+
+        this.name = name;
+        this.author = author;
+        this.status = status;
+        this.genre = status;
+    }
 }
 
 // adding books to the library
@@ -45,7 +47,7 @@ submitButton.addEventListener('click', function () {
     const nameInput = document.getElementById('name').value;
     const authorInput = document.getElementById('author').value;
     const genreInput = document.getElementById('genre').value;
-    const hasReadInput = document.getElementById('has-read').checked;
+    const hasReadInput = document.getElementById('checkbox').checked;
 
     addBookToLibrary(nameInput, authorInput, genreInput, hasReadInput);
     displayBooks();
@@ -58,10 +60,10 @@ function displayBooks() {
     display.innerHTML = '';
 
     for( const book of myLibrary){
-        const bookGrid = document.createElement('div');
+        let bookGrid = document.createElement('div');
         bookGrid.className = 'bookGrid';
-        bookGrid = `Name: ${book.name} + Author: ${book.author} + Genre: ${book.genre} +`;
-        display.appendChild(bookGrid);
+        bookGrid.textContent = `Name: ${book.name} Author: ${book.author} Genre: ${book.genre}`;
+        display.append(bookGrid);
     }
 };
 
@@ -70,6 +72,6 @@ function displayBooks() {
 document.getElementById('name').value = '';
 document.getElementById('author').value = '';
 document.getElementById('genre').value = '';
-document.getElementById('has-read').checked = false;
+document.getElementById('checkbox').checked = false;
 
 console.log(myLibrary[0]);

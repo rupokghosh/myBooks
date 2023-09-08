@@ -28,3 +28,8 @@ body{
     font-weight: bold;
     cursor: pointer;
 }
+
+#display{
+    display: grid;
+    grid-auto-flow: row;
+}

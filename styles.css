@@ -1,8 +1,13 @@
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.header{
+
 }
 #hiddenForm {
     display: none;
@@ -31,5 +36,10 @@ body{
 
 #display{
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-columns: repeat(4, 1fr);
+    grid-auto-rows: repeat(4, 1fr);
     grid-auto-flow: row;
+    grid-gap: 6px;
 }

@@ -1,3 +1,5 @@
+// global variables
+
 const myLibrary = [];
 const addButton = document.getElementById("addButton");
 const hiddenForm = document.getElementById("hiddenForm");
@@ -5,6 +7,8 @@ const closeBtn = document.getElementById("close");
 const form = document.getElementById("myForm");
 const submitButton = document.getElementById("submit");
 const display = document.getElementById("display");
+
+// book class
 
 class Book {
     constructor(name, author, status, genre) {
@@ -47,6 +51,7 @@ function checkFormValidity() {
     const genreInput = document.getElementById('genre').value;
 
     // Enable the submit button only if all required fields are filled
+
     if (nameInput && authorInput && genreInput) {
         submitButton.disabled = false;
     } else {
@@ -60,6 +65,7 @@ formFields.forEach(field => {
         element.addEventListener('input', checkFormValidity);
     }
 });
+
 //submit button functionality 
 
 submitButton.addEventListener('click', function () {

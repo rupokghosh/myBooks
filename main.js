@@ -12,7 +12,7 @@ class Book {
         this.name = name;
         this.author = author;
         this.status = status;
-        this.genre = status;
+        this.genre = genre;
     }
 }
 
@@ -39,6 +39,27 @@ form.addEventListener("submit", function(event) {
 
 });
 
+// unlocking submit button 
+
+function checkFormValidity() {
+    const nameInput = document.getElementById('name').value;
+    const authorInput = document.getElementById('author').value;
+    const genreInput = document.getElementById('genre').value;
+
+    // Enable the submit button only if all required fields are filled
+    if (nameInput && authorInput && genreInput) {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+}
+const formFields = ['name', 'author', 'genre', 'has-read'];
+formFields.forEach(field => {
+    const element = document.getElementById(field);
+    if (element) {
+        element.addEventListener('input', checkFormValidity);
+    }
+});
 //submit button functionality 
 
 submitButton.addEventListener('click', function () {
@@ -49,7 +70,7 @@ submitButton.addEventListener('click', function () {
     const genreInput = document.getElementById('genre').value;
     const hasReadInput = document.getElementById('checkbox').checked;
 
-    addBookToLibrary(nameInput, authorInput, genreInput, hasReadInput);
+    addBookToLibrary(nameInput, authorInput, hasReadInput, genreInput);
     displayBooks();
 });
 
@@ -62,10 +83,10 @@ function displayBooks() {
     for( const book of myLibrary){
         let bookGrid = document.createElement('div');
         bookGrid.className = 'bookGrid';
-        bookGrid.textContent = `Name: ${book.name} Author: ${book.author} Genre: ${book.genre}`;
+        bookGrid.innerHTML = `<p>Author: ${book.name} </p> <p>${book.author}</p> <p>${book.genre}</p> <p>Have you read it? ${book.status}</p>`;
         display.append(bookGrid);
     }
-};
+}
 
 // clear the form values
 
@@ -74,4 +95,3 @@ document.getElementById('author').value = '';
 document.getElementById('genre').value = '';
 document.getElementById('checkbox').checked = false;
 
-console.log(myLibrary[0]);

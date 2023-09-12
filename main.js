@@ -83,7 +83,7 @@ function displayBooks() {
     for( const book of myLibrary){
         let bookGrid = document.createElement('div');
         bookGrid.className = 'bookGrid';
-        bookGrid.innerHTML = `<p>Author: ${book.name} </p> <p>${book.author}</p> <p>${book.genre}</p> <p>Have you read it? ${book.status}</p>`;
+        bookGrid.innerHTML = `<p>Title: ${book.name} </p> <p>Author: ${book.author}</p> <p>Genre: ${book.genre}</p> <p>Have you read it? ${book.status}</p>`;
         display.append(bookGrid);
     }
 }

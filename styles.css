@@ -1,4 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+
 body{
     display: flex;
     flex-direction: column;
@@ -7,6 +11,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #F8E8EE;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* Head Section */
@@ -19,6 +24,7 @@ body{
     flex: 1 1 auto;
     height: 15vh;
     padding: 0 100px 0 100px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 #loginButton{
@@ -37,7 +43,8 @@ body{
     border-radius: 500px;
     overflow: hidden;
     background: #EFB495;
-    color: ghostwhite;
+    color: black;
+    font-family: 'Nunito', sans-serif;
 }
 #loginButton:hover{
     cursor: pointer;
@@ -62,6 +69,7 @@ body{
     transition: all ease-in-out 0.2s;
     font-size: 1rem;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #addButton:hover{
@@ -155,4 +163,5 @@ body{
 a{
     color: #F8E8EE;
     text-decoration: none;
+    font-family: 'Luckiest Guy', cursive;
 }

@@ -2,12 +2,32 @@
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;    
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
 }
-
-.header{
-
+#header{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    background-color: blanchedalmond;
+    flex: 1 1 auto;
+    height: 15vh;
+    padding: 0 100px 0 100px;
+}
+#loginButton{
+    height: 3em;
+    width: 5rem;
+}
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+#addButton{
+    height: 6rem;
+    width: 4rem;
 }
 #hiddenForm {
     display: none;

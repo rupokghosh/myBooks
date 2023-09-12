@@ -6,29 +6,70 @@ body{
     flex: 1 1 auto;
     margin: 0;
     padding: 0;
+    background-color: #F8E8EE;
 }
+
+/* Head Section */
+
 #header{
     display: flex;
     justify-content: space-between ;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: #EF9595;
     flex: 1 1 auto;
     height: 15vh;
     padding: 0 100px 0 100px;
 }
+
 #loginButton{
-    height: 3em;
-    width: 5rem;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #EFB495;
+    color: ghostwhite;
 }
+#loginButton:hover{
+    cursor: pointer;
+    background-color: #A86464;
+}
+
+/* Add Button section */
+
 .buttonWrapper{
     display: flex;
     justify-content: center;
     padding-top: 20px;
 }
+
 #addButton{
     height: 6rem;
     width: 8rem;
+    border: 2px solid #F2BED1;
+    background-color: #F2BED1;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 1rem;
+    cursor: pointer;
 }
+
+#addButton:hover{
+    background-color: #974EC3;
+}
+
+/* Form */
+
 #hiddenForm {
     display: none;
     position: fixed;
@@ -54,6 +95,8 @@ body{
     cursor: pointer;
 }
 
+/* Card displays */
+
 #display{
     display: grid;
     margin-top:  40px;
@@ -65,12 +108,15 @@ body{
     grid-auto-flow: row;
     grid-gap: 6px; 
 }
+
 .bookGrid{
-    background-color: plum;
+    background-color: #EFB495;
     height: 25vh;
     width: 20vw;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

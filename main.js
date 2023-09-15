@@ -52,13 +52,14 @@ function checkFormValidity() {
 
     // Enable the submit button only if all required fields are filled
 
-    if (nameInput && authorInput && genreInput) {
+    if (nameInput && authorInput&& genreInput) {
         submitButton.disabled = false;
-    } else {
+    }
+    else {
         submitButton.disabled = true;
     }
 }
-const formFields = ['name', 'author', 'genre', 'has-read'];
+const formFields = ['name', 'author', 'genre', 'status'];
 formFields.forEach(field => {
     const element = document.getElementById(field);
     if (element) {
